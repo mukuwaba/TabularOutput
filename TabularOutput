@@ -1,0 +1,50 @@
+public class TabularOutput {
+    public static void main(String[] args) {
+
+        // Define the size of the table
+        int rows = 5;
+        //int = integer, variable
+        // rows = user defined variable, store integer values
+
+        // Print column headers
+        System.out.println("N\t\t10*N\t100*N\t\t1000*N");// /t tab
+
+        // Loop through rows
+        for (int i = 1; i <= rows; i++) {
+            // Print the values in each column for the current row
+
+            //for - initiation of for loop
+            //int i=1; |initalizes loop control variable i, int (integer) type, gives inital val of 1, keeps track of loop
+            //i <= rows; i++ |loop continuation condition, loop continues as long as true / val i...
+            //is less than or equal to the value in stored in row
+            //i++ | update expression, modifies loop control variable
+            //i++ = i + 1 --> increase i by one after each loop
+
+
+            // First column: N
+            System.out.print(i + "\t\t"); //   System.out.print() to print the value of 'i',
+
+            // represents the current row number.
+
+            // Second column: 10*N
+            System.out.print(i * 10 + "\t\t"); // calc '10 * i' to get the value for the second column.
+            System.out.print(" "); // Add space for alignment
+            // \t" to add a tab space after printing the value.
+
+            // Third column: 100*N
+            System.out.print(i * 100 + "\t\t"); //calc '100 * i' to get the value for the third column.
+            System.out.print(" ");
+            //  "\t" to add a tab space.
+
+            // Fourth column: 1000*N
+            System.out.print(i * 1000);
+            System.out.print(" ");
+            // No "\t" bc this is the last value in the row.
+
+            // Move to the next row
+            System.out.println(); 
+            System.out.print(" "); // Add space
+            // moves to next line + starts new row
+        }
+    }
+}
